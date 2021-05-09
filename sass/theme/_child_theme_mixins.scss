@@ -1,0 +1,50 @@
+/*************Mixins*****************/
+
+//Animation 
+
+//mixin for keyframe animation browser compatibility
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+  
+  @mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+  }
+  /*** Placeholder for box-shadow. Use with %extend in style rules ***/
+/* box-shadow */
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+}
+
+
+//Mixin for link styling:
+@mixin links ($link, $hover, $active) {
+  & {
+      color: $link;
+      &:hover {
+          color: $hover;
+      }
+      &:active, &:focus {
+          color: $active;
+      }
+  }
+}
+
+@mixin angled-gradient($deg, $start-color, $end-color) {
+  
+  background: linear-gradient($deg, $start-color, $end-color);
+}
+

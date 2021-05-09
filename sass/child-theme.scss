@@ -1,4 +1,5 @@
 @import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "theme/child_theme_mixins";                   // <-------    Add your mixins into this file. Also add variables to overwrite Bootstrap variables here
 @import "assets/bootstrap4";                             // <------- Loads Bootstrap4
 @import "../src/sass/understrap/understrap/understrap";  // <------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
 @import "../src/sass/understrap/understrap/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
